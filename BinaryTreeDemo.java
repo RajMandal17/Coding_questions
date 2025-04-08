@@ -203,14 +203,10 @@ public static TreeInfo diameterObtimized(Node root){
         Node root = tree.buildNode(Node);
       //  System.out.println(root.data);
       //  PostOrder(root);
-
       // levelOrder(root);
-
       //System.out.println(countOfNodes(root));
       //  System.out.println(sumOfNodes(root));
-
       //System.out.println(hightOfTree(root));
-
       System.out.println(diameterObtimized(root).diam);
     }
 }
