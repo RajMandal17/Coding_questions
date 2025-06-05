@@ -17,7 +17,7 @@ public class BinaryTreeDemo {
     }
 
 
-    static class BinaryTree{                  // NOTE : for binary tree first complete left child of tree left side then right.
+    static class BinaryTree{                  // NOTE : for binary tree first complete left child of tree then right.
         static int idx = -1;
         public static Node buildNode(int nodes[]){
 

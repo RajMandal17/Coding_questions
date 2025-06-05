@@ -31,7 +31,7 @@ class PriceLevelLinkedList {
     public void insertEnd(Order order) {
         Node newNode = new Node(order);
         if (tail == null) {
-            head = tail = newNode;
+            head = tail = newNode;      // If list is empty, head and tail point to new node
         } else {
             tail.next = newNode;
             tail = newNode;
