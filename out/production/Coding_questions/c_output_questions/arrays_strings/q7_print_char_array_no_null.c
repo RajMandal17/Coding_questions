@@ -2,10 +2,9 @@
 #include <stdio.h>
 
 int main() {
-    int arr[] = {10, 20, 30};
-    int *p = arr;
-    printf("%d %d", *p++, *p);
+    char arr[] = {'A', 'B', 'C', 'D'};
+    printf("%s", arr);
     return 0;
 }
 // Write your answer below:
-// Output: 10 20 
+// Output:

@@ -38,3 +38,28 @@ public class RotatedSortedArray {
         return -1;
     }
 } 
+
+
+/*
+ * 
+Find mid:
+mid = left + (right - left) / 2
+
+If target found:
+Return mid if nums[mid] == target.
+
+Decide which half is sorted:
+
+If nums[left] <= nums[mid] → Left half is sorted.
+
+Else → Right half is sorted.
+
+Check if target is in the sorted half:
+
+If yes, narrow the search range to that half.
+
+If not, search in the other half.
+
+Repeat until found or exhausted.
+
+ */
