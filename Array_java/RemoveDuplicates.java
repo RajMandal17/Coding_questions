@@ -26,24 +26,19 @@ import java.util.*;
 public class RemoveDuplicates {
 
     // Sorted array solution
-    public static int removeDuplicatesSorted(int[] nums) {      // {0,0,1,1,1,2,2,3,3,4};
-     if(nums == null ){
-         return 0;
-     }
-     if(nums.length <= 1 ){
-         return nums.length;
-     }
-     int write = 1;
-     for(int read = 1 ; read < nums.length ; read++){
-         if(nums[read]!= nums[read-1]){
-             nums[write] = nums[read];
-             write ++;
-         }
+    public static int removeDuplicatesSorted(int[] nums) {
+        if (nums == null) return 0;
+        if (nums.length <= 1) return nums.length;
 
-     }
-     return  write;
+        int write = 1; // index to write the next unique element
+        for (int read = 1; read < nums.length; read++) {
+            if (nums[read] != nums[read - 1]) {
+                nums[write] = nums[read];
+                write++;
+            }
+        }
+        return write;
     }
-
 
     // If array is NOT sorted: use a LinkedHashSet to preserve order (extra space O(n))
     public static int removeDuplicatesUnsorted(int[] nums) {
@@ -59,6 +54,7 @@ public class RemoveDuplicates {
     // for each element, check if it appeared before (shift array when duplicate found).
     public static int removeDuplicatesUnsortedInPlaceQuadratic(int[] nums) {
         if (nums == null) return 0;
+        
         int n = nums.length;
         int write = 0;
         for (int i = 0; i < n; i++) {
