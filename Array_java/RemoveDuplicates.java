@@ -54,7 +54,7 @@ public class RemoveDuplicates {
     // for each element, check if it appeared before (shift array when duplicate found).
     public static int removeDuplicatesUnsortedInPlaceQuadratic(int[] nums) {
         if (nums == null) return 0;
-        
+
         int n = nums.length;
         int write = 0;
         for (int i = 0; i < n; i++) {
@@ -62,7 +62,10 @@ public class RemoveDuplicates {
             for (int j = 0; j < write; j++) {
                 if (nums[j] == nums[i]) { seen = true; break; }
             }
-            if (!seen) nums[write++] = nums[i];
+            if (!seen) {
+                nums[write] = nums[i];
+                write = write + 1;
+            }
         }
         return write;
     }
